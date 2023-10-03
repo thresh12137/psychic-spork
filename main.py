@@ -8,7 +8,8 @@ def read_synonym():
         for values in synonym_list:
             key = values.split(':')[0]
             value = values.split(":")[1]
-            synonym_dictionary[key] = value
+            withoutspace = value.split(',')
+            synonym_dictionary[key] = withoutspace
     return synonym_dictionary
 test1 = read_synonym()
 print((test1))
