@@ -1,4 +1,5 @@
 #A4 Word Spinner solo work Shijie Quan
+#https://github.com/thresh12137/psychic-spork.git
 from Spinner import Spinner
 import string
 
