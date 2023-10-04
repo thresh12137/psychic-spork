@@ -1,4 +1,7 @@
+#A4 Word Spinner solo work Shijie Quan
 import random
+
+
 class Spinner:
     def __init__(self, synonym_file):
         self.synonym_dict = self.load_synonyms(synonym_file)
@@ -10,16 +13,16 @@ class Spinner:
                 removals = lines.strip()
                 key = removals.split(':')[0]
                 value = removals.split(':')[1]
-                withoutspace = value.split(',')
+                withoutspace = value.split(',')  # use split again to turn into a list
                 synonyms[key] = withoutspace
         return synonyms
 
     def random_spinner(self, text, Change_word_probability=30):
-        words = text.split()
+        words = text.split()  #Split the input text into words
         spun_element = []
 
         for word in words:
-            if word in self.synonym_dict:
+            if word in self.synonym_dict:     #Randomly choose a synonym
                 if random.randint(1, 100) <= Change_word_probability:
                     synonym_list = self.synonym_dict[word]
                     substitutes = random.choice(synonym_list)
