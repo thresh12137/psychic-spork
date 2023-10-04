@@ -14,7 +14,7 @@ class Spinner:
                 synonyms[key] = withoutspace
         return synonyms
 
-    def random_spinner(self, text, Change_word_probability=50):
+    def random_spinner(self, text, Change_word_probability=30):
         words = text.split()
         spun_element = []
 
